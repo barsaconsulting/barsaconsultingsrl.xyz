@@ -50,5 +50,21 @@
             </section>
 
         <div>
+        <!-- !- Deobfuscation -->
+        <script>
+            function rev(string) {
+                return string.split('').reverse().join('')
+            }
+            const contactInfo = document.querySelector('.contact-info-hidden');
+            const payload = contactInfo.dataset.payload
+              .replace(/&c/, '&xyz')
+              .replace(/^a/, 'barsa')
+              .replace(/#b/, rev('lrsgnitlusnocasrab#'))
+              .replace(/#/, '@')
+              .replace(/&/, '.')
+            contactInfo.href = rev('otliam') + ':' + payload
+            contactInfo.innerHTML = payload
+            contactInfo.classList.remove("contact-info-hidden")
+        </script>
     </body>
 </html>
