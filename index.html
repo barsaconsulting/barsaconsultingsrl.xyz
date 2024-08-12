@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>barsa consulting srl</title>
+        <meta name="description" content="barsa consulting srl">
+        <meta name="author" content="barsa consulting srl">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        
+        <div class="sections-container">
+            
+            <header>
+                
+                <!-- !- Navigation -->
+                <nav>
+
+                    <div id="logo">
+                        <a href="/">
+                            <img alt="barsa consulting logo" src="images/banner-barsa-consulting-logo-darkmode.png" srcset="images/banner-barsa-consulting-logo-darkmode.png 1x, images/banner-barsa-consulting-logo-darkmode-retina.png 2x">
+                        </a>
+                    </div>
+                    
+                    <input class="side-menu" type="checkbox" id="side-menu"/>
+                    <label class="hamburger-menu-button" for="side-menu">
+                        <span class="hamburger-line"></span>
+                    </label>
+        
+                    <div id="menu">
+                        <a href="/apps">apps</a>
+<!--                         <a href="https://github.com/barsaconsultingsrl">github</a> -->
+                        <a class="contact-info-hidden" href="#" data-payload="a#b&c"></a>
+                    </div>
+                    
+                </nav>                
+            </header>
+            
+            <section>
+                <div id="splash">
+                    <div class="splash-text-1 animate-pop-in">we are barsa consulting SRL</div>
+                    <div class="splash-text-2 animate-pop-in">we make apps.</div>
+                    <div class="splash-text-3 animate-pop-in">we do consulting.</div>
+                </div>
+            </section>
+
+        <div>
+        
+        <!-- !- Deobfuscation -->
+        <script>
+            function rev(string) {
+                return string.split('').reverse().join('')
+            }
+            const contactInfo = document.querySelector('.contact-info-hidden');
+            const payload = contactInfo.dataset.payload
+              .replace(/&c/, '&io')
+              .replace(/^a/, 'hello')
+              .replace(/#b/, rev('atarappa#'))
+              .replace(/#/, '@')
+              .replace(/&/, '.')
+            contactInfo.href = rev('otliam') + ':' + payload
+            contactInfo.innerHTML = payload
+            contactInfo.classList.remove("contact-info-hidden")
+        </script>
+    </body>
+</html>
